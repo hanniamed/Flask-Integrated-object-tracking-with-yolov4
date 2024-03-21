@@ -104,7 +104,7 @@ def main():
         frame_size = frame.shape[:2]
         image_data = cv2.resize(frame, (input_size, input_size))
         image_data = image_data / 255.
-        image_data = image_data[np.newaxis, ...].astype(np.float32)
+        image_data = image_data[np.newaxis, ...].astype('float32')
         start_time = time.time()
 
 
@@ -147,7 +147,7 @@ def main():
 
 
         # read from the dataset file
-        allowed_classes = ['person','elephant','bear','zebra','giraffe']
+        allowed_classes = ['person']
 
         # loop through objects and use class index to get class name, allow only classes in allowed_classes list so as to start the detection
         names = []
